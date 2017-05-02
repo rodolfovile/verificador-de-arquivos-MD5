@@ -4,7 +4,7 @@ require 'digest/md5'
 
 
 unless ARGV[0] and File.directory?(ARGV[0])
-	puts "\n\n\n voce precisa the um diretorio root: int.rb <directory>\n\n\n"
+	puts "\n\n\n voce precisa the um diretorio passar um direito: verficador_md5.rb <directory>\n\n\n"
 	exit
 end
 
@@ -12,7 +12,7 @@ end
 root = ARGV[0]
 arquivo_velho_hash = Hash.new
 novo_arquivo_hash = Hash.new
-arquivo_report = "#{root}/repot_analise.txt"
+arquivo_report = "#{root}/report_analise.txt"
 arquivo_saida = "#{root}/lista_arquivo.txt"
 arquivo_saida_velho = "#{root}/lista_arquivo.old"
 
@@ -59,7 +59,7 @@ end
 
 
 novo_arquivo_hash.each do |file, md5|
-	report.puts "#{arquivo_velho_hash[file] ? "changed" : "Added"} file: #{file} #{md5}"
+	report.puts "#{arquivo_velho_hash[file] ? "modificado" : "adicionado"} file: #{file} #{md5}"
 	arquivo_velho_hash.delete(file)
 end
 
