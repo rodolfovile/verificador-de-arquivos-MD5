@@ -4,7 +4,7 @@ require 'digest/md5'
 
 
 unless ARGV[0] and File.directory?(ARGV[0])
-	puts "\n\n\n voce precisa the um diretorio passar um direito: verficador_md5.rb <directory>\n\n\n"
+	puts "\n\n\n voce precisa passar um direito: verficador_md5.rb <directory>\n\n\n"
 	exit
 end
 
